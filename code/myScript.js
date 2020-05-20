@@ -1,92 +1,30 @@
 var isClicked = false;
-var id = "5bd1bb25-2d16-40f8-abb3-fa92f8829d63";
+id = "<ENGLISH-VERSION-ASSISTANT-ID>" //By default, using the english version of the assistant; 
 var inst = Object;
 
-/*function Click() {
-    console.log("clicked: " + inst);
-    inst.closeWindow();
-    inst.destroy();
-    var id = "";
 
-
-    //var b1 = document.getElementById("b1");
-    var is
-    if (isClicked == false) {
-        document.querySelector('#b1').innerHTML = 'Switch to English';
-        id = "838542e4-26d7-4f02-8d51-cfc569c491cf";
-        isClicked = true;
-    } else {
-        document.querySelector('#b1').innerHTML = 'Switch to Arabic';
-        id = "5bd1bb25-2d16-40f8-abb3-fa92f8829d63";
-        isClicked = false;
-    }
-
-    window.loadWatsonAssistantChat({
-        // hideCloseButton:true,
-        // showLauncher:false,
-        integrationID: id, // The ID of this integration.
-        region: "eu-gb" // The region your integration is hosted in.
-    }).then(function (instance) {
-
-        //  
-        instance.render();
-        inst = instance;
-        //instance.closeWindow();
-        instance.openWindow();
-    });
-
-
-
-    console.log(isClicked + " " + id);
-    return inst;
-
-}*/
-
-/*function DefaultAssistant() {
-
-    window.loadWatsonAssistantChat({
-        //  hideCloseButton:true,
-        // showLauncher:false,
-        integrationID: id, // The ID of this integration.
-        region: "eu-gb" // The region your integration is hosted in.
-    }).then(function (instance) {
-        instance.render();
-        inst = instance;
-       // instance.openWindow();
-        console.log("hey: " + inst);
-
-    });
-
-    return inst;
-
-
-}*/
-
-
+//Change the assistant when user clicks on the change langugae button
 function Click() {
     console.log("clicked: " + inst);
     inst.closeWindow();
     inst.destroy();
     var id = "";
 
-
-    //var b1 = document.getElementById("b1");
-    var is
     if (isClicked == false) {
         document.querySelector('#b1').innerHTML = 'Switch to English';
-        id = "838542e4-26d7-4f02-8d51-cfc569c491cf";
+        id = "<ARABIC-VERSION-ASSISTANT-ID>";
         isClicked = true;
     } else {
         document.querySelector('#b1').innerHTML = 'Switch to Arabic';
-        id = "5bd1bb25-2d16-40f8-abb3-fa92f8829d63";
+        id = "<ENGLISH-VERSION-ASSISTANT-ID>";
         isClicked = false;
     }
 
     window.watsonAssistantChatOptions = {
         integrationID: id, // The ID of this integration.
-        region: "eu-gb", // The region your integration is hosted in.
+        region: "<REGION>", // The region your integration is hosted in.
         
-        serviceInstanceID: "1e4a7036-7df3-4b3c-ba43-59f50310c91c", // The ID of your service instance.
+        serviceInstanceID: "<SERVICE-INSTANCE-ID>", // The ID of your service instance.
         onLoad: function(instance) { 
           instance.render();
           inst = instance;
@@ -108,12 +46,13 @@ function Click() {
 
 
 
+//Use this function when page is loaded to render te default assistant which is the englih version
 function DefaultAssistant(){
   window.watsonAssistantChatOptions = {
       integrationID: id, // The ID of this integration.
-      region: "eu-gb", // The region your integration is hosted in.
+      region: "<REGION>", // The region your integration is hosted in.
       
-      serviceInstanceID: "1e4a7036-7df3-4b3c-ba43-59f50310c91c", // The ID of your service instance.
+      serviceInstanceID: "<SERVICE-INSTANCE-ID>", // The ID of your service instance.
       onLoad: function(instance) { instance.render();
         inst = instance;
     
@@ -130,6 +69,6 @@ function DefaultAssistant(){
 
 
 function jump(){
-window.location.href = "https://node-red-aesoi.eu-gb.mybluemix.net/ui/#!/0?socketid=aukLKOjwSWXkq0gRAAAB";
+window.location.href = "<NODE-RED-URL-APP>";
 }
 
