@@ -1,5 +1,9 @@
 # UAE Covid19 Assistant
 https://watson-covid-assistant-uae.eu-gb.mybluemix.net/
+
+## Contributors
+[Masa Abushamleh](https://github.com/nerdingitout)
+
 ## Description
 A localized COVID-19 assistant in the UAE that aims to answer the user queries to everything that responds to queries on the daily life and updates related to COVID-19. The assistant helps the users learn information related to COVID-19, cases on daily basis, transportation, healthcare centers that test and treat COVID-19 patients, pets, tips on how to stay safe inside and outside the quarantine, and self-screening and much more!<br>
 The assistant was built for both Arabic and English Languages and supports speech to text for both languages.<br>
